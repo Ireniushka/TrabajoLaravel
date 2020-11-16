@@ -22,7 +22,8 @@ class CreateWorksheetsTable extends Migration
             $table->foreign('student_id')->references('id')->on('users');
             $table->boolean('accepted');
             $table->boolean('deleted')->default(false);
-            $table->timestamps();
+            $table->timestamp('created_at')->useCurrent();
+            $table->timestamp('update_at')->useCurrent();
         });
     }
 
