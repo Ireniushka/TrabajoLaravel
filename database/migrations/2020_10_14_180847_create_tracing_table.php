@@ -23,7 +23,7 @@ class CreateTracingTable extends Migration
             $table->foreign('tutor_c_id')->references('id')->on('users');
             $table->boolean('deleted')->default(false);
             $table->timestamp('created_at')->useCurrent();
-            $table->timestamp('update_at')->useCurrent();
+            $table->timestamp('updated_at')->useCurrent();
         });
     }
 

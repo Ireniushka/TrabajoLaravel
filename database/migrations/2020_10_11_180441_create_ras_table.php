@@ -22,7 +22,7 @@ class CreateRasTable extends Migration
             $table->foreign('module_id')->references('id')->on('modules');
             $table->boolean('deleted')->default(false);
             $table->timestamp('created_at')->useCurrent();
-            $table->timestamp('update_at')->useCurrent();
+            $table->timestamp('updated_at')->useCurrent();
         });
     }
 
